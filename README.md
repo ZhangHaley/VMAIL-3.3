@@ -56,16 +56,3 @@ If you find this code useful, please reference in your paper:
       journal={Neural Information Processing Systems}
 }
 ```
-## Modified infomation
-
-### 增加背景特征提取网络
-
-增加了背景提取网络 $\mu(\cdot)$ ,使用不变提取网络 $\phi(\cdot)$ 以及背景提取网络 $\mu(\cdot)$ 同时对图片进行重建。
-
-### 以互信息约束特征提取过程：
-
-  （1）不同环境中 expert_data 的 label 与不变特征提取器 $\phi(\cdot)$ 为0.
-
-      使用post['stoch'] 作为互信息的约束条件
-
-  (2) 不同环境 expert 的 背景特征提取器 $\mu(\cdot)$ 的互信息为0
